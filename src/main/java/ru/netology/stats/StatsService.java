@@ -40,9 +40,10 @@ public class StatsService {
     public int beloweAverage(int[] sales) {
         int summBelMonth = 0;
         int averSumm = averAmount(sales);
-        for (int sale : sales) {
-            if (sale < averSumm) ;
-            summBelMonth++;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < averSumm) {
+                summBelMonth++;
+            }
         }
         return summBelMonth;
     }
@@ -50,9 +51,10 @@ public class StatsService {
     public int aboveAverage(int[] sales) {
         int summAvMonth = 0;
         int averSumm = averAmount(sales);
-        for (int sale : sales) {
-            if (sale > averSumm) ;
-            summAvMonth++;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > averSumm) {
+                summAvMonth++;
+            }
         }
         return summAvMonth;
 
